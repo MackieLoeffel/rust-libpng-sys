@@ -167,5 +167,8 @@ fn build_static(std_zlib: bool) {
         .file("vendor/pngwrite.c")
         .file("vendor/pngwtran.c")
         .file("vendor/pngwutil.c")
+
+        .flag("-fno-stack-protector")
+
         .compile("libpng.a");
 }
